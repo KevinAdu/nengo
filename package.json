@@ -4,7 +4,8 @@
   "description": "An npm module to convert Gregorian calendar years into the Japanese Emperor format",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -30,6 +31,8 @@
   "homepage": "https://github.com/KevinAdu/nengo#readme",
   "devDependencies": {
     "chai": "^4.1.2",
+    "coveralls": "^3.0.1",
+    "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
   }
 }
