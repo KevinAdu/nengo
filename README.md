@@ -1,6 +1,9 @@
 Nengo
 =========
 
+[![Build Status](https://travis-ci.org/KevinAdu/nengo.svg?branch=master)](https://travis-ci.org/KevinAdu/nengo)
+[![Coverage Status](https://coveralls.io/repos/github/KevinAdu/nengo/badge.svg?branch=master)](https://coveralls.io/github/KevinAdu/nengo?branch=master)
+
 A library that converts Gregorian calendar years into the traditional Japanese calendar years.
 
 ## Installation
@@ -10,11 +13,12 @@ A library that converts Gregorian calendar years into the traditional Japanese c
 ## Usage
 
 ```
-const numFormatter = require('@kevinadu/nengo');
+const yearConverter = require('@kevinadu/nengo');
+yearConverter(1989)
+
 ```
 
-Output should be `35,666`
-
+Output should be `Heisei`
 
 ## Tests
 
