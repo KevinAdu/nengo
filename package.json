@@ -1,6 +1,6 @@
 {
   "name": "nengo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An npm module to convert Gregorian calendar years into the Japanese Emperor format",
   "main": "index.js",
   "scripts": {
