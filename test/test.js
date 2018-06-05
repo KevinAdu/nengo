@@ -20,5 +20,13 @@ describe('#yearConverter', () => {
 
     expect(heiseiYear).to.equal('Heisei');
     expect(tokyoOlympicYear).to.equal('Heisei');
-  })
+  });
+
+  it('should convert any year below the first recorded emperor calendar date', () => {
+    const genjiYear = yearConverter(1862);
+    const firstAdYear = yearConverter(0);
+
+    expect(genjiYear).to.equal('Genji');
+    expect(firstAdYear).to.equal('Genji');
+  });
 });

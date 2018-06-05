@@ -12,6 +12,8 @@ module.exports = function(year) {
   let exactPeriodYear = periodYears.find((periodYear, i) => {
     if (i === 0) {
       return periodYear <= year;
+    } else if (i === periodYears.length - 1) {
+      return true;
     } else {
       return periodYear <= year && periodYears[i-1] > year;
     }
