@@ -4,16 +4,20 @@ const periodData = require('./periods');
 
 /**
  * Converts Gregorian calendar year to Japanese calendar year
- * @param {number} number
- * @param {string} locale
+ * @param {number} year
  * @return {string}
  */
 module.exports = function(year) {
   const periodYears = Object.keys(periodData).sort((a, b) => b - a);
-  let exactPeriodYear = 0;
+  let exactPeriodYear = periodYears.find((periodYear, i) => {
+    if (i === 0) {
+      return periodYear <= year;
+    } else {
+      return periodYear <= year && periodYears[i-1] > year;
+    }
+  });
 
-  exactPeriodYear = periodYears.find((periodYear, i) => {
-    return periodYear => year && periodYears[i+1] < year;
-  })
+  exactPeriodYear = exactPeriodYear || periodYears[0];
+
   return periodData[exactPeriodYear].periodName;
 };
