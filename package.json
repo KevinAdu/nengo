@@ -17,11 +17,15 @@
   "keywords": [
     "calendar",
     "japanese",
-    "years",
+    "year",
     "gregorian",
     "date",
-    "time",
-    "datetime"
+    "日にち",
+    "日付",
+    "年号",
+    "年",
+    "日本語",
+    "カレンダー"
   ],
   "author": "KevinAdu",
   "license": "ISC",
