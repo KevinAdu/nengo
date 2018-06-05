@@ -19,7 +19,5 @@ module.exports = function(year) {
     }
   });
 
-  exactPeriodYear = exactPeriodYear || periodYears[0];
-
   return periodData[exactPeriodYear];
 };
