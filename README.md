@@ -8,17 +8,24 @@ A library that converts Gregorian calendar years into the traditional Japanese c
 
 ## Installation
 
-  `npm install @kevinadu/nengo`
+  `npm install nengo`
 
 ## Usage
 
 ```
-const yearConverter = require('@kevinadu/nengo');
+const yearConverter = require('nengo');
 yearConverter(1989)
-
 ```
 
-Output should be `Heisei`
+Output should be an object containing the data related the year:
+
+```
+{
+  "periodName": "Heisei",
+  "periodNameKanji": "平成",
+  "periodNameKana": "へいせい"
+}
+```
 
 ## Tests
 
