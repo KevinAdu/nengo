@@ -5,14 +5,15 @@ const periodData = require("./periods");
  * @param {number} year
  * @return {string}
  */
-module.exports = function(year) {
-  const periodYears = Object.keys(periodData).sort((a, b) => b - a);
+module.exports = {
+  japaneseYear: function(gregorianYear) {
+    const periodYears = Object.keys(periodData).sort((a, b) => b - a);
+    const exactPeriodYear = periodYears.find((periodYear, i) => {
+      if (i === 0) return periodYear <= gregorianYear;
+      if (i === periodYears.length - 1) return true;
+      return periodYear <= gregorianYear && periodYears[i - 1] > gregorianYear;
+    });
 
-  const exactPeriodYear = periodYears.find((periodYear, i) => {
-    if (i === 0) return periodYear <= year;
-    if (i === periodYears.length - 1) return true;
-    return periodYear <= year && periodYears[i - 1] > year;
-  });
-
-  return periodData[exactPeriodYear];
-};
+    return periodData[exactPeriodYear];
+  }
+}
