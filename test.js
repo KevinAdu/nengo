@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const { japaneseYear } = require("./index");
+const { japaneseYear, gregorianYearRange } = require("./index");
 
 describe("#japaneseYear", () => {
   it("should convert the Gregorian year to the appropriate Japanese calendar year", () => {
@@ -26,5 +26,22 @@ describe("#japaneseYear", () => {
 
     expect(genjiYear.periodName).to.equal("Genji");
     expect(firstAdYear.periodName).to.equal("Genji");
+  });
+});
+
+describe("#gregorianYearRange", () => {
+  it("should convert the Japanese calendar year to the Gregorian year", () => {
+    const heiseiPeriodRange = gregorianYearRange("平成");
+    const showaPeriodRange = gregorianYearRange("昭和");
+    const meijiPeriodRange = gregorianYearRange("明治");
+    const doesntExistPeriodRange = gregorianYearRange("横浜");
+
+    expect(heiseiPeriodRange.startYear).to.equal(1989);
+    expect(showaPeriodRange.startYear).to.equal(1926);
+    expect(meijiPeriodRange.startYear).to.equal(1868);
+    expect(heiseiPeriodRange.endYear).to.equal(null);
+    expect(showaPeriodRange.endYear).to.equal(1988);
+    expect(meijiPeriodRange.endYear).to.equal(1911);
+    expect(doesntExistPeriodRange).to.equal(null);
   });
 });
