@@ -1,11 +1,11 @@
-const periodData = require('./periods');
+const periodData = require("./periods");
 
 /**
  * Converts Gregorian calendar year to Japanese calendar year
  * @param {number} year
  * @return {string}
  */
-module.exports = function (year) {
+module.exports = function(year) {
   const periodYears = Object.keys(periodData).sort((a, b) => b - a);
 
   const exactPeriodYear = periodYears.find((periodYear, i) => {

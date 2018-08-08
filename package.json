@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
-    "lint": "./node_modules/.bin/eslint test.js index.js"
+    "lint": "./node_modules/.bin/eslint test.js index.js",
+    "prettier": "prettier --write test.js index.js"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -39,8 +40,11 @@
     "coveralls": "^3.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.2",
     "istanbul": "^0.4.5",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.0"
   }
 }
