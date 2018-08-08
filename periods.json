@@ -1,32 +1,38 @@
-{
-  "1989": {
+[
+  {
+    "startYear": 1989,
     "periodName": "Heisei",
     "periodNameKanji": "平成",
     "periodNameKana": "へいせい"
   },
-  "1926": {
+  {
+    "startYear": 1926,
     "periodName": "Showa",
     "periodNameKanji": "昭和",
     "periodNameKana": "しょうわ"
   },
-  "1912": {
+  {
+    "startYear": 1912,
     "periodName": "Taisho",
     "periodNameKanji": "大正",
     "periodNameKana": "たいしょう"
   },
-  "1868": {
+  {
+    "startYear": 1868,
     "periodName": "Meiji",
     "periodNameKanji": "明治",
     "periodNameKana": "めいじ"
   },
-  "1865": {
+  {
+    "startYear": 1865,
     "periodName": "Keiou",
     "periodNameKanji": "慶応",
     "periodNameKana": "けいおう"
   },
-  "1864": {
+  {
+    "startYear": 1864,
     "periodName": "Genji",
     "periodNameKanji": "元治",
     "periodNameKana": "げんじ"
   }
-}
+]
