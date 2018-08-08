@@ -1,5 +1,3 @@
-'use strict';
-
 const periodData = require('./periods');
 
 /**
@@ -7,16 +5,13 @@ const periodData = require('./periods');
  * @param {number} year
  * @return {string}
  */
-module.exports = function(year) {
+module.exports = function (year) {
   const periodYears = Object.keys(periodData).sort((a, b) => b - a);
-  let exactPeriodYear = periodYears.find((periodYear, i) => {
-    if (i === 0) {
-      return periodYear <= year;
-    } else if (i === periodYears.length - 1) {
-      return true;
-    } else {
-      return periodYear <= year && periodYears[i-1] > year;
-    }
+
+  const exactPeriodYear = periodYears.find((periodYear, i) => {
+    if (i === 0) return periodYear <= year;
+    if (i === periodYears.length - 1) return true;
+    return periodYear <= year && periodYears[i - 1] > year;
   });
 
   return periodData[exactPeriodYear];

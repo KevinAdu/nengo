@@ -1,6 +1,4 @@
-'use strict';
-
-const expect = require('chai').expect;
+const { expect } = require('chai');
 const yearConverter = require('../index');
 
 describe('#yearConverter', () => {
