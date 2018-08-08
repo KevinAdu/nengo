@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Converts Gregorian calendar year to Japanese calendar year
    * @param {number} year
-   * @return {string}
+   * @return {object}
    */
   japaneseYear: gregorianYear => {
     const periodYears = periodData.sort((a, b) => b.startYear - a.startYear).map(period => period.startYear);
@@ -17,6 +17,11 @@ module.exports = {
     return periodData.find(period => exactPeriodYear === period.startYear);
   },
 
+  /**
+   * Converts Japanese calendar year to Gregorian year range
+   * @param {number} year
+   * @return {object}
+   */
   gregorianYearRange: japanesePeriod => {
     const foundPeriod = periodData.find(period => period.periodNameKanji === japanesePeriod);
     let yearRange = null;
