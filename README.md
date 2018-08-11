@@ -12,18 +12,33 @@ A library that converts Gregorian calendar years into the traditional Japanese c
 
 ## Usage
 
-```
-const yearConverter = require('nengo');
-yearConverter(1989)
-```
-
-Output should be an object containing the data related the year:
+Currently two functions are provided by nengo as shown below:
 
 ```
+const { japaneseYear, gregorianYearRange } = require('nengo');
+```
+
+To convert the Gregorian year into the Japanese calendar, use the `japaneseYear` function.
+The output should be an object containing data related to the Japanese calendar year:
+
+```js
+japaneseYear(1989);
 {
+  "startYear": 1989,
   "periodName": "Heisei",
   "periodNameKanji": "平成",
   "periodNameKana": "へいせい"
+}
+```
+
+To get information about a particular Japanese period (currently only accepts Kanji) in Gregorian calendar year format, use the `gregorianYearRange` function.
+The output should be an object containing data related to the :
+
+```js
+gregorianYearRange("昭和");
+{
+  startYear: 1926,
+  endYear: 1988
 }
 ```
 
@@ -37,4 +52,8 @@ npm test
 
 ## Contributing
 
-In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using the following command:
+
+```bash
+npm run-script lint
+```
