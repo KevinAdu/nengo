@@ -11,6 +11,8 @@ module.exports = {
       (a, b) => b.startYear - a.startYear
     ).map(period => period.startYear);
 
+    if (gregorianYear < periodYears[periodYears.length - 1]) return null;
+
     const exactPeriodYear = periodYears.find((periodYear, i) => {
       if (i === 0) return periodYear <= gregorianYear;
       if (i === periodYears.length - 1) return true;

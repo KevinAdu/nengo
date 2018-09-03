@@ -25,12 +25,12 @@ describe("#japaneseYear", () => {
     expect(tokyoOlympicYear.currentJapaneseYear).to.equal(32);
   });
 
-  it("should convert any year below the first recorded emperor calendar date", () => {
+  it("should convert any year below the first recorded emperor calendar date to null", () => {
     const gennaYear = japaneseYear(1615);
     const firstAdYear = japaneseYear(0);
 
     expect(gennaYear.periodName).to.equal("Genna");
-    expect(firstAdYear.periodName).to.equal("Genna"); // TODO Should be null
+    expect(firstAdYear).to.equal(null);
   });
 });
 
