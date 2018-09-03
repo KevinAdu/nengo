@@ -1,10 +1,4 @@
 [
-  {
-    "startYear": 1861,
-    "periodName": "文久",
-    "periodNameKanji": "Bunkyū",
-    "periodNameKana": "ぶんきゅう"
-  },
   { "startYear": 1615,
     "periodName": "Genna",
     "periodNameKanji": "元和",
@@ -164,6 +158,12 @@
     "periodName": "Man'en",
     "periodNameKanji": "万延",
     "periodNameKana": "まんえん"
+  },
+  {
+    "startYear": 1861,
+    "periodName": "Bunkyū",
+    "periodNameKanji": "文久",
+    "periodNameKana": "ぶんきゅう"
   },
   {
     "startYear": 1864,

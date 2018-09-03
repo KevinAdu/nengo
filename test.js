@@ -21,11 +21,11 @@ describe("#japaneseYear", () => {
   });
 
   it("should convert any year below the first recorded emperor calendar date", () => {
-    const genjiYear = japaneseYear(1862);
+    const gennaYear = japaneseYear(1615);
     const firstAdYear = japaneseYear(0);
 
-    expect(genjiYear.periodName).to.equal("Genji");
-    expect(firstAdYear.periodName).to.equal("Genji");
+    expect(gennaYear.periodName).to.equal("Genna");
+    expect(firstAdYear.periodName).to.equal("Genna");
   });
 });
 
