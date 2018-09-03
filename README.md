@@ -27,7 +27,8 @@ japaneseYear(1989);
   "startYear": 1989,
   "periodName": "Heisei",
   "periodNameKanji": "平成",
-  "periodNameKana": "へいせい"
+  "periodNameKana": "へいせい",
+  "currentJapaneseYear": 0
 }
 ```
 
