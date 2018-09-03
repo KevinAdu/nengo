@@ -8,8 +8,11 @@ describe("#japaneseYear", () => {
     const meijiExactYear = japaneseYear(1868);
 
     expect(heiseiExactYear.periodName).to.equal("Heisei");
+    expect(heiseiExactYear.currentJapaneseYear).to.equal(1);
     expect(showaYear.periodName).to.equal("Showa");
+    expect(showaYear.currentJapaneseYear).to.equal(62);
     expect(meijiExactYear.periodName).to.equal("Meiji");
+    expect(meijiExactYear.currentJapaneseYear).to.equal(1);
   });
 
   it("should convert any year above the last emperor calendar date", () => {
@@ -17,7 +20,9 @@ describe("#japaneseYear", () => {
     const tokyoOlympicYear = japaneseYear(2020);
 
     expect(heiseiYear.periodName).to.equal("Heisei");
+    expect(heiseiYear.currentJapaneseYear).to.equal(2);
     expect(tokyoOlympicYear.periodName).to.equal("Heisei");
+    expect(tokyoOlympicYear.currentJapaneseYear).to.equal(32);
   });
 
   it("should convert any year below the first recorded emperor calendar date", () => {
@@ -25,7 +30,7 @@ describe("#japaneseYear", () => {
     const firstAdYear = japaneseYear(0);
 
     expect(gennaYear.periodName).to.equal("Genna");
-    expect(firstAdYear.periodName).to.equal("Genna");
+    expect(firstAdYear.periodName).to.equal("Genna"); // TODO Should be null
   });
 });
 

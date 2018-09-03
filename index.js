@@ -17,7 +17,18 @@ module.exports = {
       return periodYear <= gregorianYear && periodYears[i - 1] > gregorianYear;
     });
 
-    return periodData.find(period => exactPeriodYear === period.startYear);
+    const foundPeriod = periodData.find(
+      period => exactPeriodYear === period.startYear
+    );
+
+    const updatedPeriod = Object.assign(
+      {
+        currentJapaneseYear: gregorianYear - foundPeriod.startYear + 1
+      },
+      foundPeriod
+    );
+
+    return updatedPeriod;
   },
 
   /**
