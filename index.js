@@ -3,11 +3,14 @@ const periodData = require("./periods");
 module.exports = {
   /**
    * Converts Gregorian calendar year to Japanese calendar year
-   * @param {number} year
+   * @param {String} year
    * @return {object}
    */
   japaneseYear: gregorianYear => {
-    const periodYears = periodData.sort((a, b) => b.startYear - a.startYear).map(period => period.startYear);
+    const periodYears = periodData.sort(
+      (a, b) => b.startYear - a.startYear
+    ).map(period => period.startYear);
+
     const exactPeriodYear = periodYears.find((periodYear, i) => {
       if (i === 0) return periodYear <= gregorianYear;
       if (i === periodYears.length - 1) return true;
@@ -19,12 +22,14 @@ module.exports = {
 
   /**
    * Converts Japanese calendar year to Gregorian year range
-   * @param {number} year
+   * @param {String} year
    * @return {object}
    */
   gregorianYearRange: japanesePeriod => {
-    const foundPeriod = periodData.find(period => period.periodNameKanji === japanesePeriod);
     let yearRange = null;
+    const foundPeriod = periodData.find(
+      period => period.periodNameKanji === japanesePeriod
+    );
 
     if (foundPeriod) {
       const previousPeriod = periodData[periodData.indexOf(foundPeriod) - 1];
