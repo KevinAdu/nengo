@@ -25,14 +25,12 @@ The output should be an object containing data related to the Japanese calendar 
 japaneseYear(1989);
 {
   "startYear": 1989,
-  "periodName": "Heisei",
-  "periodNameKanji": "平成",
-  "periodNameKana": "へいせい",
+  "names": ["Heisei", "平成", "へいせい"],
   "currentJapaneseYear": 0
 }
 ```
 
-To get information about a particular Japanese period (currently only accepts Kanji) in Gregorian calendar year format, use the `gregorianYearRange` function.
+To get information about a particular Japanese period in Gregorian calendar year format, use the `gregorianYearRange` function.
 The output should be an object containing data related to the :
 
 ```js
