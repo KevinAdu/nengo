@@ -1,204 +1,275 @@
 [
-  { "startYear": 1615,
+  {
+    "startYear": 1615,
     "periodName": "Genna",
-    "periodNameKanji": "元和",
-    "periodNameKana": "げんな"
+    "alteranativeNames": [
+      "元和", "げんな"
+    ]
   },
-  { "startYear": 1624,
+  {
+    "startYear": 1624,
     "periodName": "Kan'ei",
-    "periodNameKanji": "寛永",
-    "periodNameKana": "かんえい"
+    "alteranativeNames": [
+      "寛永", "かんえい"
+    ]
   },
-  { "startYear": 1644,
+  {
+    "startYear": 1644,
     "periodName": "Shōhō",
-    "periodNameKanji": "正保",
-    "periodNameKana": "しょうほう"
+    "alteranativeNames": [
+      "正保", "しょうほう"
+    ]
   },
-  { "startYear": 1648,
+  {
+    "startYear": 1648,
     "periodName": "Keian",
-    "periodNameKanji": "慶安",
-    "periodNameKana": "けいあん"
+    "alteranativeNames": [
+      "慶安", "けいあん"
+    ]
   },
-  { "startYear": 1652,
+  {
+    "startYear": 1652,
     "periodName": "Jōō",
-    "periodNameKanji": "承応",
-    "periodNameKana": "じょうおう"
+    "alteranativeNames": [
+      "承応", "じょうおう"
+    ]
   },
-  { "startYear": 1655,
+  {
+    "startYear": 1655,
     "periodName": "Meireki",
-    "periodNameKanji": "明暦",
-    "periodNameKana": "へいれき"
+    "alteranativeNames": [
+      "明暦", "へいれき"
+    ]
   },
-  { "startYear": 1658,
+  {
+    "startYear": 1658,
     "periodName": "Manji",
-    "periodNameKanji": "万治",
-    "periodNameKana": "まんじ"
+    "alteranativeNames": [
+      "万治", "まんじ"
+    ]
   },
-  { "startYear": 1661,
+  {
+    "startYear": 1661,
     "periodName": "Kanbun",
-    "periodNameKanji": "寛文",
-    "periodNameKana": "かんぶん"
+    "alteranativeNames": [
+      "寛文", "かんぶん"
+    ]
   },
-  { "startYear": 1673,
+  {
+    "startYear": 1673,
     "periodName": "Enpō",
-    "periodNameKanji": "延宝",
-    "periodNameKana": "えんぽう"
+    "alteranativeNames": [
+      "延宝", "えんぽう"
+    ]
   },
-  { "startYear": 1681,
+  {
+    "startYear": 1681,
     "periodName": "Tenna",
-    "periodNameKanji": "天和",
-    "periodNameKana": "てんな"
+    "alteranativeNames": [
+      "天和", "てんな"
+    ]
   },
-  { "startYear": 1684,
+  {
+    "startYear": 1684,
     "periodName": "Jōkyō",
-    "periodNameKanji": "貞享",
-    "periodNameKana": "じょうきょう"
+    "alteranativeNames": [
+      "貞享", "じょうきょう"
+    ]
   },
-  { "startYear": 1688,
+  {
+    "startYear": 1688,
     "periodName": "Genroku",
-    "periodNameKanji": "元禄",
-    "periodNameKana": "げんろく"
+    "alteranativeNames": [
+      "元禄", "げんろく"
+    ]
   },
-  { "startYear": 1704,
+  {
+    "startYear": 1704,
     "periodName": "Hōei",
-    "periodNameKanji": "宝永",
-    "periodNameKana": "ほうえい"
+    "alteranativeNames": [
+      "宝永", "ほうえい"
+    ]
   },
-  { "startYear": 1711,
+  {
+    "startYear": 1711,
     "periodName": "Shōtoku",
-    "periodNameKanji": "正徳",
-    "periodNameKana": "しょうとく"
+    "alteranativeNames": [
+      "正徳", "しょうとく"
+    ]
   },
-  { "startYear": 1716,
+  {
+    "startYear": 1716,
     "periodName": "Kyōhō",
-    "periodNameKanji": "享保",
-    "periodNameKana": "きょうほう"
+    "alteranativeNames": [
+      "享保", "きょうほう"
+    ]
   },
-  { "startYear": 1736,
+  {
+    "startYear": 1736,
     "periodName": "Genbun",
-    "periodNameKanji": "元文",
-    "periodNameKana": "げんぶん"
+    "alteranativeNames": [
+      "元文", "げんぶん"
+    ]
   },
-  { "startYear": 1741,
+  {
+    "startYear": 1741,
     "periodName": "Kanpō",
-    "periodNameKanji": "寛保",
-    "periodNameKana": "かんぽう"
+    "alteranativeNames": [
+      "寛保", "かんぽう"
+    ]
   },
-  { "startYear": 1744,
+  {
+    "startYear": 1744,
     "periodName": "Enkyō",
-    "periodNameKanji": "延享",
-    "periodNameKana": "えんきょう"
+    "alteranativeNames": [
+      "延享", "えんきょう"
+    ]
   },
-  { "startYear": 1748,
+  {
+    "startYear": 1748,
     "periodName": "Kan'en",
-    "periodNameKanji": "寛延",
-    "periodNameKana": "かんえん"
+    "alteranativeNames": [
+      "寛延", "かんえん"
+    ]
   },
-  { "startYear": 1751,
+  {
+    "startYear": 1751,
     "periodName": "Hōreki",
-    "periodNameKanji": "宝暦",
-    "periodNameKana": "ほうれき"
+    "alteranativeNames": [
+      "宝暦", "ほうれき"
+    ]
   },
-  { "startYear": 1764,
+  {
+    "startYear": 1764,
     "periodName": "Meiwa",
-    "periodNameKanji": "明和",
-    "periodNameKana": "めいわ"
+    "alteranativeNames": [
+      "明和", "めいわ"
+    ]
   },
-  { "startYear": 1772,
+  {
+    "startYear": 1772,
     "periodName": "An'ei",
-    "periodNameKanji": "安永",
-    "periodNameKana": "あんえい"
+    "alteranativeNames": [
+      "安永", "あんえい"
+    ]
   },
-  { "startYear": 1781,
+  {
+    "startYear": 1781,
     "periodName": "Tenmei",
-    "periodNameKanji": "天明",
-    "periodNameKana": "てんめい"
+    "alteranativeNames": [
+      "天明", "てんめい"
+    ]
   },
-  { "startYear": 1789,
+  {
+    "startYear": 1789,
     "periodName": "Kansei",
-    "periodNameKanji": "寛政",
-    "periodNameKana": "かんせい"
+    "alteranativeNames": [
+      "寛政", "かんせい"
+    ]
   },
-  { "startYear": 1801,
+  {
+    "startYear": 1801,
     "periodName": "Kyōwa",
-    "periodNameKanji": "享和",
-    "periodNameKana": "きょうわ"
+    "alteranativeNames": [
+      "享和", "きょうわ"
+    ]
   },
-  { "startYear": 1804,
+  {
+    "startYear": 1804,
     "periodName": "Bunka",
-    "periodNameKanji": "文化",
-    "periodNameKana": "ぶんか"
+    "alteranativeNames": [
+      "文化", "ぶんか"
+    ]
   },
-  { "startYear": 1818,
+  {
+    "startYear": 1818,
     "periodName": "Bunsei",
-    "periodNameKanji": "文政",
-    "periodNameKana": "ぶんせい"
+    "alteranativeNames": [
+      "文政", "ぶんせい"
+    ]
   },
-  { "startYear": 1830,
+  {
+    "startYear": 1830,
     "periodName": "Tenpō",
-    "periodNameKanji": "天保",
-    "periodNameKana": "てんぽう"
+    "alteranativeNames": [
+      "天保", "てんぽう"
+    ]
   },
-  { "startYear": 1844,
+  {
+    "startYear": 1844,
     "periodName": "Kōka",
-    "periodNameKanji": "弘化",
-    "periodNameKana": "こうか"
+    "alteranativeNames": [
+      "弘化", "こうか"
+    ]
   },
-  { "startYear": 1848,
+  {
+    "startYear": 1848,
     "periodName": "Kaei",
-    "periodNameKanji": "嘉永",
-    "periodNameKana": "かえい"
+    "alteranativeNames": [
+      "嘉永", "かえい"
+    ]
   },
-  { "startYear": 1854,
+  {
+    "startYear": 1854,
     "periodName": "Ansei",
-    "periodNameKanji": "安政",
-    "periodNameKana": "あんせい"
+    "alteranativeNames": [
+      "安政", "あんせい"
+    ]
   },
-  { "startYear": 1860,
+  {
+    "startYear": 1860,
     "periodName": "Man'en",
-    "periodNameKanji": "万延",
-    "periodNameKana": "まんえん"
+    "alteranativeNames": [
+      "万延", "まんえん"
+    ]
   },
   {
     "startYear": 1861,
     "periodName": "Bunkyū",
-    "periodNameKanji": "文久",
-    "periodNameKana": "ぶんきゅう"
+    "alteranativeNames": [
+      "文久", "ぶんきゅう"
+    ]
   },
   {
     "startYear": 1864,
     "periodName": "Genji",
-    "periodNameKanji": "元治",
-    "periodNameKana": "げんじ"
+    "alteranativeNames": [
+      "元治", "げんじ"
+    ]
   },
   {
     "startYear": 1865,
     "periodName": "Keiou",
-    "periodNameKanji": "慶応",
-    "periodNameKana": "けいおう"
+    "alteranativeNames": [
+      "慶応", "けいおう"
+    ]
   },
   {
     "startYear": 1868,
     "periodName": "Meiji",
-    "periodNameKanji": "明治",
-    "periodNameKana": "めいじ"
+    "alteranativeNames": [
+      "明治", "めいじ"
+    ]
   },
   {
     "startYear": 1912,
     "periodName": "Taisho",
-    "periodNameKanji": "大正",
-    "periodNameKana": "たいしょう"
+    "alteranativeNames": [
+      "大正", "たいしょう"
+    ]
   },
   {
     "startYear": 1926,
     "periodName": "Showa",
-    "periodNameKanji": "昭和",
-    "periodNameKana": "しょうわ"
+    "alteranativeNames": [
+      "昭和", "しょうわ"
+    ]
   },
   {
     "startYear": 1989,
     "periodName": "Heisei",
-    "periodNameKanji": "平成",
-    "periodNameKana": "へいせい"
+    "alteranativeNames": [
+      "平成", "へいせい"
+    ]
   }
 ]

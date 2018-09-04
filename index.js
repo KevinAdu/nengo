@@ -40,8 +40,8 @@ module.exports = {
    */
   gregorianYearRange: japanesePeriod => {
     let yearRange = null;
-    const foundPeriod = periodData.find(
-      period => period.periodNameKanji === japanesePeriod
+    const foundPeriod = periodData.find(period =>
+      period.alteranativeNames.includes(japanesePeriod)
     );
 
     if (foundPeriod) {
