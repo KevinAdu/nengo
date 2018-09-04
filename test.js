@@ -7,11 +7,11 @@ describe("#japaneseYear", () => {
     const showaYear = japaneseYear(1987);
     const meijiExactYear = japaneseYear(1868);
 
-    expect(heiseiExactYear.periodName).to.equal("Heisei");
+    expect(heiseiExactYear.names).to.include("Heisei");
     expect(heiseiExactYear.currentJapaneseYear).to.equal(1);
-    expect(showaYear.periodName).to.equal("Showa");
+    expect(showaYear.names).to.include("Showa");
     expect(showaYear.currentJapaneseYear).to.equal(62);
-    expect(meijiExactYear.periodName).to.equal("Meiji");
+    expect(meijiExactYear.names).to.include("Meiji");
     expect(meijiExactYear.currentJapaneseYear).to.equal(1);
   });
 
@@ -19,9 +19,9 @@ describe("#japaneseYear", () => {
     const heiseiYear = japaneseYear(1990);
     const tokyoOlympicYear = japaneseYear(2020);
 
-    expect(heiseiYear.periodName).to.equal("Heisei");
+    expect(heiseiYear.names).to.include("Heisei");
     expect(heiseiYear.currentJapaneseYear).to.equal(2);
-    expect(tokyoOlympicYear.periodName).to.equal("Heisei");
+    expect(tokyoOlympicYear.names).to.include("Heisei");
     expect(tokyoOlympicYear.currentJapaneseYear).to.equal(32);
   });
 
@@ -29,7 +29,7 @@ describe("#japaneseYear", () => {
     const gennaYear = japaneseYear(1615);
     const firstAdYear = japaneseYear(0);
 
-    expect(gennaYear.periodName).to.equal("Genna");
+    expect(gennaYear.names).to.include("Genna");
     expect(firstAdYear).to.equal(null);
   });
 });
