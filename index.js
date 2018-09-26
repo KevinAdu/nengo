@@ -3,20 +3,27 @@ const periodData = require("./periods");
 module.exports = {
   /**
    * Converts Gregorian calendar year to Japanese calendar year
-   * @param {String} year
-   * @return {object}
    */
   japaneseYear: gregorianYear => {
-    const periodYears = periodData.sort(
-      (a, b) => b.startYear - a.startYear
-    ).map(period => period.startYear);
+    let gregorianYearNum;
 
-    if (gregorianYear < periodYears[periodYears.length - 1]) return null;
+    if (gregorianYear instanceof Date) {
+      gregorianYearNum = gregorianYear.getFullYear();
+    } else if (typeof gregorianYear === "number") {
+      gregorianYearNum = gregorianYear;
+    } else {
+      throw new TypeError(`Expected a Date or Number`);
+    }
+
+    const periodYears = periodData
+      .sort((a, b) => b.startYear - a.startYear).map(period => period.startYear);
+
+    if (gregorianYearNum < periodYears[periodYears.length - 1]) return null;
 
     const exactPeriodYear = periodYears.find((periodYear, i) => {
-      if (i === 0) return periodYear <= gregorianYear;
+      if (i === 0) return periodYear <= gregorianYearNum;
       if (i === periodYears.length - 1) return true;
-      return periodYear <= gregorianYear && periodYears[i - 1] > gregorianYear;
+      return periodYear <= gregorianYearNum && periodYears[i - 1] > gregorianYearNum;
     });
 
     const foundPeriod = periodData.find(
@@ -25,7 +32,7 @@ module.exports = {
 
     const updatedPeriod = Object.assign(
       {
-        currentJapaneseYear: gregorianYear - foundPeriod.startYear + 1
+        currentJapaneseYear: gregorianYearNum - foundPeriod.startYear + 1
       },
       foundPeriod
     );

@@ -22,7 +22,7 @@ To convert the Gregorian year into the Japanese calendar, use the `japaneseYear`
 The output should be an object containing data related to the Japanese calendar year:
 
 ```js
-japaneseYear(1989);
+japaneseYear(1989); //OR japaneseYear(new Date(1989, 0))
 {
   "startYear": 1989,
   "names": ["Heisei", "平成", "へいせい"],

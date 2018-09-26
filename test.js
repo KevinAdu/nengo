@@ -32,6 +32,23 @@ describe("#japaneseYear", () => {
     expect(gennaYear.names).to.include("Genna");
     expect(firstAdYear).to.equal(null);
   });
+
+  it("should convert the Gregorian year in date format to the appropriate Japanese calendar year", () => {
+    const heiseiExactYear = japaneseYear(new Date(1989, 0));
+    const showaYear = japaneseYear(new Date(1987, 0));
+    const meijiExactYear = japaneseYear(new Date(1868, 0));
+
+    expect(heiseiExactYear.names).to.include("Heisei");
+    expect(heiseiExactYear.currentJapaneseYear).to.equal(1);
+    expect(showaYear.names).to.include("Showa");
+    expect(showaYear.currentJapaneseYear).to.equal(62);
+    expect(meijiExactYear.names).to.include("Meiji");
+    expect(meijiExactYear.currentJapaneseYear).to.equal(1);
+  });
+
+  it("should throw a type error for a type it doesn't expect", () => {
+    expect(() => japaneseYear([])).to.throw(TypeError);
+  });
 });
 
 describe("#gregorianYearRange", () => {
