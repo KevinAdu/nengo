@@ -16,14 +16,17 @@ module.exports = {
     }
 
     const periodYears = periodData
-      .sort((a, b) => b.startYear - a.startYear).map(period => period.startYear);
+      .sort((a, b) => b.startYear - a.startYear)
+      .map(period => period.startYear);
 
     if (gregorianYearNum < periodYears[periodYears.length - 1]) return null;
 
     const exactPeriodYear = periodYears.find((periodYear, i) => {
       if (i === 0) return periodYear <= gregorianYearNum;
       if (i === periodYears.length - 1) return true;
-      return periodYear <= gregorianYearNum && periodYears[i - 1] > gregorianYearNum;
+      return (
+        periodYear <= gregorianYearNum && periodYears[i - 1] > gregorianYearNum
+      );
     });
 
     const foundPeriod = periodData.find(
