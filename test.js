@@ -54,19 +54,26 @@ describe("#japaneseYear", () => {
 describe("#gregorianYearRange", () => {
   it("should convert the Japanese calendar year to the Gregorian year", () => {
     const heiseiPeriodRange = gregorianYearRange("平成");
+    const heiseiPeriodRangeEnglish = gregorianYearRange("Heisei");
     const showaPeriodRange = gregorianYearRange("昭和");
     const meijiPeriodRange = gregorianYearRange("明治");
     const genjiPeriodRange = gregorianYearRange("元治");
     const doesntExistPeriodRange = gregorianYearRange("横浜");
 
     expect(heiseiPeriodRange.startYear).to.equal(1989);
+    expect(heiseiPeriodRangeEnglish.startYear).to.equal(1989);
     expect(showaPeriodRange.startYear).to.equal(1926);
     expect(meijiPeriodRange.startYear).to.equal(1868);
     expect(genjiPeriodRange.startYear).to.equal(1864);
     expect(heiseiPeriodRange.endYear).to.equal(null);
+    expect(heiseiPeriodRangeEnglish.endYear).to.equal(null);
     expect(showaPeriodRange.endYear).to.equal(1988);
     expect(meijiPeriodRange.endYear).to.equal(1911);
     expect(genjiPeriodRange.endYear).to.equal(1864);
     expect(doesntExistPeriodRange).to.equal(null);
+  });
+
+  it("should throw a type error for a non string it doesn't expect", () => {
+    expect(() => gregorianYearRange(1229)).to.throw(TypeError);
   });
 });

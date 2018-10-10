@@ -49,6 +49,10 @@ module.exports = {
    * @return {object}
    */
   gregorianYearRange: japanesePeriod => {
+    if (typeof japanesePeriod !== "string") {
+      throw new TypeError("Expected a String");
+    }
+
     let yearRange = null;
     const foundPeriod = periodData.find(period =>
       period.names.includes(japanesePeriod)
