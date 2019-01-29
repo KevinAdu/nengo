@@ -1,4 +1,4 @@
-Nengo
+Nengo-full
 =========
 
 [![Build Status](https://travis-ci.org/KevinAdu/nengo.svg?branch=master)](https://travis-ci.org/KevinAdu/nengo)
@@ -15,7 +15,7 @@ A library that converts Gregorian calendar dates into the traditional Japanese c
 Currently two functions are provided by nengo as shown below:
 
 ```
-const { japaneseYear, gregorianYearRange } = require('nengo');
+const { japaneseYear, gregorianYearRange } = require('nengo-full');
 ```
 
 To convert the Gregorian date into the Japanese calendar, use the `japaneseYear` function.

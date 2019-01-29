@@ -1,6 +1,6 @@
 {
   "name": "nengo-full",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "An npm module to convert Gregorian calendar dates into the Japanese Emperor format",
   "main": "index.js",
   "scripts": {
