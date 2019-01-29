@@ -4,40 +4,50 @@ module.exports = {
   /**
    * Converts Gregorian calendar year to Japanese calendar year
    */
-  japaneseYear: gregorianYear => {
+  japaneseYear: gregorianDate => {
     let gregorianYearNum;
+    let gregorianMonthNum;
+    let gregorianDayNum;
 
-    if (gregorianYear instanceof Date) {
-      gregorianYearNum = gregorianYear.getFullYear();
-    } else if (typeof gregorianYear === "number") {
-      gregorianYearNum = gregorianYear;
+    if (gregorianDate instanceof Date) {
+      gregorianYearNum = gregorianDate.getFullYear();
+      // javascript month start from 0
+      gregorianMonthNum = gregorianDate.getMonth() + 1;
+      gregorianDayNum = gregorianDate.getDate();
     } else {
-      throw new TypeError(`Expected a Date or Number`);
+      throw new TypeError(`Expected a Date`);
     }
 
-    const periodYears = periodData
-      .sort((a, b) => b.startYear - a.startYear)
-      .map(period => period.startYear);
+    const periodOrdered = periodData
+      .sort((a, b) => b.startYear - a.startYear);
+      //.map(period => period.startYear);
 
-    if (gregorianYearNum < periodYears[periodYears.length - 1]) return null;
+    // not cover
+    if (gregorianYearNum < periodOrdered[periodOrdered.length - 1].startYear) return null;
 
-    const exactPeriodYear = periodYears.find((periodYear, i) => {
-      if (i === 0) return periodYear <= gregorianYearNum;
-      if (i === periodYears.length - 1) return true;
-      return (
-        periodYear <= gregorianYearNum && periodYears[i - 1] > gregorianYearNum
-      );
+    const exactPeriod = periodOrdered.find((period, i) => {
+      // earliest (edo begining)
+      if (i === periodOrdered.length - 1) return true;
+
+      if(gregorianYearNum > period.startYear)
+        return true;
+      if(gregorianYearNum === period.startYear && gregorianMonthNum > period.startMonth)
+        return true;
+      if(gregorianYearNum === period.startYear && gregorianMonthNum === period.startMonth && gregorianDayNum >= period.startDay)
+        return true;
+
+      return false;
     });
 
-    const foundPeriod = periodData.find(
-      period => exactPeriodYear === period.startYear
-    );
+    /*const foundPeriod = periodData.find(
+      period => exactPeriod === period.startYear
+    );*/
 
     const updatedPeriod = Object.assign(
       {
-        currentJapaneseYear: gregorianYearNum - foundPeriod.startYear + 1
+        currentJapaneseYear: gregorianYearNum - exactPeriod.startYear + 1
       },
-      foundPeriod
+      exactPeriod
     );
 
     return updatedPeriod;

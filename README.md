@@ -4,11 +4,11 @@ Nengo
 [![Build Status](https://travis-ci.org/KevinAdu/nengo.svg?branch=master)](https://travis-ci.org/KevinAdu/nengo)
 [![Coverage Status](https://coveralls.io/repos/github/KevinAdu/nengo/badge.svg?branch=master)](https://coveralls.io/github/KevinAdu/nengo?branch=master)
 
-A library that converts Gregorian calendar years into the traditional Japanese calendar years.
+A library that converts Gregorian calendar dates into the traditional Japanese calendar years.
 
 ## Installation
 
-  `npm install nengo`
+  `npm install nengo-full`
 
 ## Usage
 
@@ -18,11 +18,11 @@ Currently two functions are provided by nengo as shown below:
 const { japaneseYear, gregorianYearRange } = require('nengo');
 ```
 
-To convert the Gregorian year into the Japanese calendar, use the `japaneseYear` function.
+To convert the Gregorian date into the Japanese calendar, use the `japaneseYear` function.
 The output should be an object containing data related to the Japanese calendar year:
 
 ```js
-japaneseYear(1989); //OR japaneseYear(new Date(1989, 0))
+japaneseYear(new Date(1989, 2));
 {
   "startYear": 1989,
   "names": ["Heisei", "平成", "へいせい"],

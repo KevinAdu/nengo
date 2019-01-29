@@ -1,236 +1,392 @@
 [
   {
     "startYear": 1615,
+    "startMonth": 7,
+    "startDay": 1,
     "names": [
-      "元和", "げんな", "Genna"
+      "元和",
+      "げんな",
+      "Genna"
     ]
   },
   {
     "startYear": 1624,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "寛永", "かんえい", "Kan'ei"
+      "寛永",
+      "かんえい",
+      "Kan'ei"
     ]
   },
   {
     "startYear": 1644,
+    "startMonth": 12,
+    "startDay": 1,
     "names": [
-      "正保", "しょうほう", "Shōhō"
+      "正保",
+      "しょうほう",
+      "Shōhō"
     ]
   },
   {
     "startYear": 1648,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "慶安", "けいあん", "Keian"
+      "慶安",
+      "けいあん",
+      "Keian"
     ]
   },
   {
     "startYear": 1652,
+    "startMonth": 9,
+    "startDay": 1,
     "names": [
-      "承応", "じょうおう", "Jōō"
+      "承応",
+      "じょうおう",
+      "Jōō"
     ]
   },
   {
     "startYear": 1655,
+    "startMonth": 4,
+    "startDay": 1,
     "names": [
-      "明暦", "へいれき", "Meireki"
+      "明暦",
+      "へいれき",
+      "Meireki"
     ]
   },
   {
     "startYear": 1658,
+    "startMonth": 7,
+    "startDay": 1,
     "names": [
-      "万治", "まんじ", "Manji"
+      "万治",
+      "まんじ",
+      "Manji"
     ]
   },
   {
     "startYear": 1661,
+    "startMonth": 4,
+    "startDay": 1,
     "names": [
-      "寛文", "かんぶん", "Kanbun"
+      "寛文",
+      "かんぶん",
+      "Kanbun"
     ]
   },
   {
     "startYear": 1673,
+    "startMonth": 9,
+    "startDay": 1,
     "names": [
-      "延宝", "えんぽう", "Enpō"
+      "延宝",
+      "えんぽう",
+      "Enpō"
     ]
   },
   {
     "startYear": 1681,
+    "startMonth": 9,
+    "startDay": 1,
     "names": [
-      "天和", "てんな", "Tenna"
+      "天和",
+      "てんな",
+      "Tenna"
     ]
   },
   {
     "startYear": 1684,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "貞享", "じょうきょう", "Jōkyō"
+      "貞享",
+      "じょうきょう",
+      "Jōkyō"
     ]
   },
   {
     "startYear": 1688,
+    "startMonth": 10,
+    "startDay": 1,
     "names": [
-      "元禄", "げんろく", "Genroku"
+      "元禄",
+      "げんろく",
+      "Genroku"
     ]
   },
   {
     "startYear": 1704,
+    "startMonth": 3,
+    "startDay": 1,
     "names": [
-      "宝永", "ほうえい", "Hōei"
+      "宝永",
+      "ほうえい",
+      "Hōei"
     ]
   },
   {
     "startYear": 1711,
+    "startMonth": 4,
+    "startDay": 1,
     "names": [
-      "正徳", "しょうとく", "Shōtoku"
+      "正徳",
+      "しょうとく",
+      "Shōtoku"
     ]
   },
   {
     "startYear": 1716,
+    "startMonth": 7,
+    "startDay": 1,
     "names": [
-      "享保", "きょうほう", "Kyōhō"
+      "享保",
+      "きょうほう",
+      "Kyōhō"
     ]
   },
   {
     "startYear": 1736,
+    "startMonth": 4,
+    "startDay": 1,
     "names": [
-      "元文", "げんぶん", "Genbun"
+      "元文",
+      "げんぶん",
+      "Genbun"
     ]
   },
   {
     "startYear": 1741,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "寛保", "かんぽう", "Kanpō"
+      "寛保",
+      "かんぽう",
+      "Kanpō"
     ]
   },
   {
     "startYear": 1744,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "延享", "えんきょう", "Enkyō"
+      "延享",
+      "えんきょう",
+      "Enkyō"
     ]
   },
   {
     "startYear": 1748,
+    "startMonth": 7,
+    "startDay": 1,
     "names": [
-      "寛延", "かんえん", "Kan'en"
+      "寛延",
+      "かんえん",
+      "Kan'en"
     ]
   },
   {
     "startYear": 1751,
+    "startMonth": 10,
+    "startDay": 1,
     "names": [
-      "宝暦", "ほうれき", "Hōreki"
+      "宝暦",
+      "ほうれき",
+      "Hōreki"
     ]
   },
   {
     "startYear": 1764,
+    "startMonth": 6,
+    "startDay": 1,
     "names": [
-      "明和", "めいわ", "Meiwa"
+      "明和",
+      "めいわ",
+      "Meiwa"
     ]
   },
   {
     "startYear": 1772,
+    "startMonth": 11,
+    "startDay": 1,
     "names": [
-      "安永", "あんえい", "An'ei"
+      "安永",
+      "あんえい",
+      "An'ei"
     ]
   },
   {
     "startYear": 1781,
+    "startMonth": 4,
+    "startDay": 1,
     "names": [
-      "天明", "てんめい", "Tenmei"
+      "天明",
+      "てんめい",
+      "Tenmei"
     ]
   },
   {
     "startYear": 1789,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "寛政", "かんせい", "Kansei"
+      "寛政",
+      "かんせい",
+      "Kansei"
     ]
   },
   {
     "startYear": 1801,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "享和", "きょうわ", "Kyōwa"
+      "享和",
+      "きょうわ",
+      "Kyōwa"
     ]
   },
   {
     "startYear": 1804,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "文化", "ぶんか", "Bunka"
+      "文化",
+      "ぶんか",
+      "Bunka"
     ]
   },
   {
     "startYear": 1818,
+    "startMonth": 4,
+    "startDay": 1,
     "names": [
-      "文政", "ぶんせい", "Bunsei"
+      "文政",
+      "ぶんせい",
+      "Bunsei"
     ]
   },
   {
     "startYear": 1830,
+    "startMonth": 12,
+    "startDay": 1,
     "names": [
-      "天保", "てんぽう", "Tenpō"
+      "天保",
+      "てんぽう",
+      "Tenpō"
     ]
   },
   {
     "startYear": 1844,
+    "startMonth": 12,
+    "startDay": 1,
     "names": [
-      "弘化", "こうか", "Kōka"
+      "弘化",
+      "こうか",
+      "Kōka"
     ]
   },
   {
     "startYear": 1848,
+    "startMonth": 2,
+    "startDay": 1,
     "names": [
-      "嘉永", "かえい", "Kaei"
+      "嘉永",
+      "かえい",
+      "Kaei"
     ]
   },
   {
     "startYear": 1854,
+    "startMonth": 10,
+    "startDay": 1,
     "names": [
-      "安政", "あんせい", "Ansei"
+      "安政",
+      "あんせい",
+      "Ansei"
     ]
   },
   {
     "startYear": 1860,
+    "startMonth": 3,
+    "startDay": 1,
     "names": [
-      "万延", "まんえん", "Man'en"
+      "万延",
+      "まんえん",
+      "Man'en"
     ]
   },
   {
     "startYear": 1861,
+    "startMonth": 3,
+    "startDay": 1,
     "names": [
-      "文久", "ぶんきゅう", "Bunkyū"
+      "文久",
+      "ぶんきゅう",
+      "Bunkyū"
     ]
   },
   {
     "startYear": 1864,
+    "startMonth": 3,
+    "startDay": 1,
     "names": [
-      "元治", "げんじ", "Genji"
+      "元治",
+      "げんじ",
+      "Genji"
     ]
   },
   {
     "startYear": 1865,
+    "startMonth": 5,
+    "startDay": 1,
     "names": [
-      "慶応", "けいおう", "Keiou"
+      "慶応",
+      "けいおう",
+      "Keiou"
     ]
   },
   {
     "startYear": 1868,
+    "startMonth": 10,
+    "startDay": 23,
     "names": [
-      "明治", "めいじ", "Meiji"
+      "明治",
+      "めいじ",
+      "Meiji"
     ]
   },
   {
     "startYear": 1912,
+    "startMonth": 7,
+    "startDay": 30,
     "names": [
-      "大正", "たいしょう", "Taisho"
+      "大正",
+      "たいしょう",
+      "Taisho"
     ]
   },
   {
     "startYear": 1926,
+    "startMonth": 12,
+    "startDay": 25,
     "names": [
-      "昭和", "しょうわ", "Showa"
+      "昭和",
+      "しょうわ",
+      "Showa"
     ]
   },
   {
     "startYear": 1989,
+    "startMonth": 1,
+    "startDay": 8,
     "names": [
-      "平成", "へいせい", "Heisei"
+      "平成",
+      "へいせい",
+      "Heisei"
     ]
   }
 ]
