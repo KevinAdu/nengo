@@ -22,23 +22,24 @@ To convert the Gregorian year into the Japanese calendar, use the `japaneseYear`
 The output should be an object containing data related to the Japanese calendar year:
 
 ```js
-japaneseYear(1989); //OR japaneseYear(new Date(1989, 0))
-{
-  "startYear": 1989,
-  "names": ["Heisei", "平成", "へいせい"],
-  "currentJapaneseYear": 0
-}
+japaneseYear(new Date(1989, 0))
+
+// {
+//   "startYear": 1989,
+//   "names": ["Heisei", "平成", "へいせい"],
+//   "currentJapaneseYear": 0
+// }
 ```
 
-To get information about a particular Japanese period in Gregorian calendar year format, use the `gregorianYearRange` function.
-The output should be an object containing data related to the :
+You can also obtain the start and end year of a particular Japanese period in Gregorian calendar year format, using the `gregorianYearRange` function.
 
 ```js
 gregorianYearRange("昭和");
-{
-  startYear: 1926,
-  endYear: 1988
-}
+
+// {
+//   startYear: 1926,
+//   endYear: 1988
+// }
 ```
 
 ## Tests
