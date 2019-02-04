@@ -3,6 +3,9 @@ Nengo
 
 [![Build Status](https://travis-ci.org/KevinAdu/nengo.svg?branch=master)](https://travis-ci.org/KevinAdu/nengo)
 [![Coverage Status](https://coveralls.io/repos/github/KevinAdu/nengo/badge.svg?branch=master)](https://coveralls.io/github/KevinAdu/nengo?branch=master)
+[![Node version](https://img.shields.io/node/v/nengo.svg?style=flat)](http://nodejs.org/download/)
+[![HitCount](http://hits.dwyl.io/kevinadu/kevinadu/nengo.svg)](http://hits.dwyl.io/kevinadu/kevinadu/nengo)
+![dependencies](https://img.shields.io/david/kevinadu/nengo.svg?style=flat)
 
 A library that converts Gregorian calendar years into the traditional Japanese calendar years.
 
