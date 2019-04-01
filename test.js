@@ -21,8 +21,8 @@ describe("#japaneseYear", () => {
 
     expect(heiseiYear.names).to.include("Heisei");
     expect(heiseiYear.currentJapaneseYear).to.equal(2);
-    expect(tokyoOlympicYear.names).to.include("Heisei");
-    expect(tokyoOlympicYear.currentJapaneseYear).to.equal(32);
+    expect(tokyoOlympicYear.names).to.include("Reiwa");
+    expect(tokyoOlympicYear.currentJapaneseYear).to.equal(2);
   });
 
   it("should convert any year below the first recorded emperor calendar date to null", () => {
@@ -53,21 +53,21 @@ describe("#japaneseYear", () => {
 
 describe("#gregorianYearRange", () => {
   it("should convert the Japanese calendar year to the Gregorian year", () => {
+    const reiwaPeriodRange = gregorianYearRange("令和");
+    const reiwaPeriodRangeEnglish = gregorianYearRange("Reiwa");
     const heiseiPeriodRange = gregorianYearRange("平成");
-    const heiseiPeriodRangeEnglish = gregorianYearRange("Heisei");
-    const showaPeriodRange = gregorianYearRange("昭和");
     const meijiPeriodRange = gregorianYearRange("明治");
     const genjiPeriodRange = gregorianYearRange("元治");
     const doesntExistPeriodRange = gregorianYearRange("横浜");
 
+    expect(reiwaPeriodRange.startYear).to.equal(2019);
+    expect(reiwaPeriodRangeEnglish.startYear).to.equal(2019);
     expect(heiseiPeriodRange.startYear).to.equal(1989);
-    expect(heiseiPeriodRangeEnglish.startYear).to.equal(1989);
-    expect(showaPeriodRange.startYear).to.equal(1926);
     expect(meijiPeriodRange.startYear).to.equal(1868);
     expect(genjiPeriodRange.startYear).to.equal(1864);
-    expect(heiseiPeriodRange.endYear).to.equal(null);
-    expect(heiseiPeriodRangeEnglish.endYear).to.equal(null);
-    expect(showaPeriodRange.endYear).to.equal(1988);
+    expect(reiwaPeriodRange.endYear).to.equal(null);
+    expect(reiwaPeriodRangeEnglish.endYear).to.equal(null);
+    expect(heiseiPeriodRange.endYear).to.equal(2018);
     expect(meijiPeriodRange.endYear).to.equal(1911);
     expect(genjiPeriodRange.endYear).to.equal(1864);
     expect(doesntExistPeriodRange).to.equal(null);
