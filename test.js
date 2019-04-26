@@ -7,11 +7,11 @@ describe("#japaneseYear", () => {
     const showaYear = japaneseYear(1987);
     const meijiExactYear = japaneseYear(1868);
 
-    expect(heiseiExactYear.names).to.include("Heisei");
+    expect(heiseiExactYear.names.english).to.include("Heisei");
     expect(heiseiExactYear.currentJapaneseYear).to.equal(1);
-    expect(showaYear.names).to.include("Showa");
+    expect(showaYear.names.english).to.include("Showa");
     expect(showaYear.currentJapaneseYear).to.equal(62);
-    expect(meijiExactYear.names).to.include("Meiji");
+    expect(meijiExactYear.names.english).to.include("Meiji");
     expect(meijiExactYear.currentJapaneseYear).to.equal(1);
   });
 
@@ -19,9 +19,9 @@ describe("#japaneseYear", () => {
     const heiseiYear = japaneseYear(1990);
     const tokyoOlympicYear = japaneseYear(2020);
 
-    expect(heiseiYear.names).to.include("Heisei");
+    expect(heiseiYear.names.english).to.include("Heisei");
     expect(heiseiYear.currentJapaneseYear).to.equal(2);
-    expect(tokyoOlympicYear.names).to.include("Reiwa");
+    expect(tokyoOlympicYear.names.english).to.include("Reiwa");
     expect(tokyoOlympicYear.currentJapaneseYear).to.equal(2);
   });
 
@@ -29,7 +29,7 @@ describe("#japaneseYear", () => {
     const gennaYear = japaneseYear(1615);
     const firstAdYear = japaneseYear(0);
 
-    expect(gennaYear.names).to.include("Genna");
+    expect(gennaYear.names.english).to.include("Genna");
     expect(firstAdYear).to.equal(null);
   });
 
@@ -38,11 +38,11 @@ describe("#japaneseYear", () => {
     const showaYear = japaneseYear(new Date(1987, 0));
     const meijiExactYear = japaneseYear(new Date(1868, 0));
 
-    expect(heiseiExactYear.names).to.include("Heisei");
+    expect(heiseiExactYear.names.english).to.include("Heisei");
     expect(heiseiExactYear.currentJapaneseYear).to.equal(1);
-    expect(showaYear.names).to.include("Showa");
+    expect(showaYear.names.english).to.include("Showa");
     expect(showaYear.currentJapaneseYear).to.equal(62);
-    expect(meijiExactYear.names).to.include("Meiji");
+    expect(meijiExactYear.names.english).to.include("Meiji");
     expect(meijiExactYear.currentJapaneseYear).to.equal(1);
   });
 
@@ -55,6 +55,7 @@ describe("#gregorianYearRange", () => {
   it("should convert the Japanese calendar year to the Gregorian year", () => {
     const reiwaPeriodRange = gregorianYearRange("令和");
     const reiwaPeriodRangeEnglish = gregorianYearRange("Reiwa");
+    const reiwaPeriodRangeHiragana = gregorianYearRange("れいわ");
     const heiseiPeriodRange = gregorianYearRange("平成");
     const meijiPeriodRange = gregorianYearRange("明治");
     const genjiPeriodRange = gregorianYearRange("元治");
@@ -62,6 +63,7 @@ describe("#gregorianYearRange", () => {
 
     expect(reiwaPeriodRange.startYear).to.equal(2019);
     expect(reiwaPeriodRangeEnglish.startYear).to.equal(2019);
+    expect(reiwaPeriodRangeHiragana.startYear).to.equal(2019);
     expect(heiseiPeriodRange.startYear).to.equal(1989);
     expect(meijiPeriodRange.startYear).to.equal(1868);
     expect(genjiPeriodRange.startYear).to.equal(1864);

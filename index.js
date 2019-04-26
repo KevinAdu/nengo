@@ -54,8 +54,11 @@ module.exports = {
     }
 
     let yearRange = null;
-    const foundPeriod = periodData.find(period =>
-      period.names.includes(japanesePeriod)
+    const foundPeriod = periodData.find(
+      period =>
+        period.names.kanji === japanesePeriod ||
+        period.names.hiragana === japanesePeriod ||
+        period.names.english === japanesePeriod
     );
 
     if (foundPeriod) {

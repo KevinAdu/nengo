@@ -29,8 +29,11 @@ japaneseYear(new Date(2019, 0))
 
 // {
 //   "startYear": 2019,
-//   "names": ["Reiwa", "令和", "れいわ"],
-//   "currentJapaneseYear": 0
+//   "names": {
+//     "kanji": "令和",
+//     "hiragana": "れいわ",
+//     "english": "Reiwa"
+//   }
 // }
 ```
 
