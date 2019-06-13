@@ -2,22 +2,25 @@ const { expect } = require("chai");
 const { japaneseYear, gregorianYearRange } = require("./index");
 
 describe("#japaneseYear", () => {
-  it("should convert the Gregorian year to the appropriate Japanese calendar year", () => {
-    const heiseiExactYear = japaneseYear(1989);
-    const showaYear = japaneseYear(1987);
-    const meijiExactYear = japaneseYear(1868);
+  it("should convert the Gregorian date to the appropriate Japanese calendar year", () => {
+    const heiseiExactYear = japaneseYear(new Date(1989, 0, 9));
+    const showaYear2 = japaneseYear(new Date(1989, 0, 6));
+    const showaYear = japaneseYear(new Date(1987, 6, 6));
+    const meijiExactYear = japaneseYear(new Date(1869, 6, 6));
 
     expect(heiseiExactYear.names.english).to.include("Heisei");
+    expect(showaYear2.names.english).to.include("Showa");
     expect(heiseiExactYear.currentJapaneseYear).to.equal(1);
     expect(showaYear.names.english).to.include("Showa");
     expect(showaYear.currentJapaneseYear).to.equal(62);
+
     expect(meijiExactYear.names.english).to.include("Meiji");
-    expect(meijiExactYear.currentJapaneseYear).to.equal(1);
+    expect(meijiExactYear.currentJapaneseYear).to.equal(2);
   });
 
-  it("should convert any year above the last emperor calendar date", () => {
-    const heiseiYear = japaneseYear(1990);
-    const tokyoOlympicYear = japaneseYear(2020);
+  it("should convert any date above the last emperor calendar date", () => {
+    const heiseiYear = japaneseYear(new Date(1990, 1, 1));
+    const tokyoOlympicYear = japaneseYear(new Date(2020, 6, 7));
 
     expect(heiseiYear.names.english).to.include("Heisei");
     expect(heiseiYear.currentJapaneseYear).to.equal(2);
@@ -25,18 +28,18 @@ describe("#japaneseYear", () => {
     expect(tokyoOlympicYear.currentJapaneseYear).to.equal(2);
   });
 
-  it("should convert any year below the first recorded emperor calendar date to null", () => {
-    const gennaYear = japaneseYear(1615);
-    const firstAdYear = japaneseYear(0);
+ it("should convert any date below the first recorded emperor calendar date to null", () => {
+    const gennaYear = japaneseYear(new Date(1615, 6, 1));
+    const firstAdYear = japaneseYear(new Date(1600, 1, 1));
 
     expect(gennaYear.names.english).to.include("Genna");
     expect(firstAdYear).to.equal(null);
   });
 
-  it("should convert the Gregorian year in date format to the appropriate Japanese calendar year", () => {
-    const heiseiExactYear = japaneseYear(new Date(1989, 0));
+  it("should convert the Gregorian date in date format to the appropriate Japanese calendar year", () => {
+    const heiseiExactYear = japaneseYear(new Date(1989, 2));
     const showaYear = japaneseYear(new Date(1987, 0));
-    const meijiExactYear = japaneseYear(new Date(1868, 0));
+    const meijiExactYear = japaneseYear(new Date(1868, 11));
 
     expect(heiseiExactYear.names.english).to.include("Heisei");
     expect(heiseiExactYear.currentJapaneseYear).to.equal(1);
