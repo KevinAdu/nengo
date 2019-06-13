@@ -5,48 +5,32 @@ module.exports = {
    * Converts Gregorian calendar year to Japanese calendar year
    */
   japaneseYear: gregorianDate => {
-    let gregorianYearNum;
-    let gregorianMonthNum;
-    let gregorianDayNum;
+    let gregorianYear;
+    let gregorianMonth;
+    let gregorianDay;
 
     if (gregorianDate instanceof Date) {
-      gregorianYearNum = gregorianDate.getFullYear();
-      // javascript month start from 0
-      gregorianMonthNum = gregorianDate.getMonth() + 1;
-      gregorianDayNum = gregorianDate.getDate();
+      gregorianYear = gregorianDate.getFullYear();
+      gregorianMonth = gregorianDate.getMonth() + 1;
+      gregorianDay = gregorianDate.getDate();
     } else {
       throw new TypeError(`Expected a Date`);
     }
 
-    const periodOrdered = periodData
-      .sort((a, b) => b.startYear - a.startYear);
-      //.map(period => period.startYear);
+    const periodOrdered = periodData.sort((a, b) => b.startYear - a.startYear);
 
-    // not cover
-    if (gregorianYearNum < periodOrdered[periodOrdered.length - 1].startYear) return null;
+    if (gregorianYear < periodOrdered[periodOrdered.length - 1].startYear) return null;
 
     const exactPeriod = periodOrdered.find((period, i) => {
-      // earliest (edo begining)
       if (i === periodOrdered.length - 1) return true;
-
-      if(gregorianYearNum > period.startYear)
-        return true;
-      if(gregorianYearNum === period.startYear && gregorianMonthNum > period.startMonth)
-        return true;
-      if(gregorianYearNum === period.startYear && gregorianMonthNum === period.startMonth && gregorianDayNum >= period.startDay)
-        return true;
-
+      if (gregorianYear > period.startYear) return true;
+      if (gregorianYear === period.startYear && gregorianMonth > period.startMonth) return true;
+      if (gregorianYear === period.startYear && gregorianMonth === period.startMonth && gregorianDay >= period.startDay) return true;
       return false;
     });
 
-    /*const foundPeriod = periodData.find(
-      period => exactPeriod === period.startYear
-    );*/
-
     const updatedPeriod = Object.assign(
-      {
-        currentJapaneseYear: gregorianYearNum - exactPeriod.startYear + 1
-      },
+      {currentJapaneseYear: gregorianYear - exactPeriod.startYear + 1},
       exactPeriod
     );
 
