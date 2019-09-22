@@ -28,7 +28,7 @@ describe("#japaneseYear", () => {
     expect(tokyoOlympicYear.currentJapaneseYear).to.equal(2);
   });
 
- it("should convert any date below the first recorded emperor calendar date to null", () => {
+  it("should convert any date below the first recorded emperor calendar date to null", () => {
     const gennaYear = japaneseYear(new Date(1615, 6, 1));
     const firstAdYear = japaneseYear(new Date(1600, 1, 1));
 

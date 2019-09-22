@@ -19,18 +19,31 @@ module.exports = {
 
     const periodOrdered = periodData.sort((a, b) => b.startYear - a.startYear);
 
-    if (gregorianYear < periodOrdered[periodOrdered.length - 1].startYear) return null;
+    if (gregorianYear < periodOrdered[periodOrdered.length - 1].startYear)
+      return null;
 
     const exactPeriod = periodOrdered.find((period, i) => {
       if (i === periodOrdered.length - 1) return true;
       if (gregorianYear > period.startYear) return true;
-      if (gregorianYear === period.startYear && gregorianMonth > period.startMonth) return true;
-      if (gregorianYear === period.startYear && gregorianMonth === period.startMonth && gregorianDay >= period.startDay) return true;
+      if (
+        gregorianYear === period.startYear &&
+        gregorianMonth > period.startMonth
+      ) {
+        return true;
+      }
+      if (
+        gregorianYear === period.startYear &&
+        gregorianMonth === period.startMonth &&
+        gregorianDay >= period.startDay
+      ) {
+        return true;
+      }
+
       return false;
     });
 
     const updatedPeriod = Object.assign(
-      {currentJapaneseYear: gregorianYear - exactPeriod.startYear + 1},
+      { currentJapaneseYear: gregorianYear - exactPeriod.startYear + 1 },
       exactPeriod
     );
 
