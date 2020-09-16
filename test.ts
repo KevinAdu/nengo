@@ -1,5 +1,5 @@
-const { expect } = require("chai");
-const { japaneseYear, gregorianYearRange } = require("./index");
+import { expect } from 'chai';
+import { japaneseYear, gregorianYearRange } from './index';
 
 describe("#japaneseYear", () => {
   it("should convert the Gregorian date to the appropriate Japanese calendar year", () => {

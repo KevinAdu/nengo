@@ -1,13 +1,12 @@
-const periodData = require("./periods");
+import periodData from './periods.json';
 
-module.exports = {
   /**
    * Converts Gregorian calendar year to Japanese calendar year
    */
-  japaneseYear: gregorianDate => {
-    let gregorianYear;
-    let gregorianMonth;
-    let gregorianDay;
+  export const japaneseYear = (gregorianDate: Date): PeriodAndExactYear => {
+    let gregorianYear: number;
+    let gregorianMonth: number;
+    let gregorianDay: number;
 
     if (gregorianDate instanceof Date) {
       gregorianYear = gregorianDate.getFullYear();
@@ -17,13 +16,13 @@ module.exports = {
       throw new TypeError(`Expected a Date`);
     }
 
-    const periodOrdered = periodData.sort((a, b) => b.startYear - a.startYear);
+    const periodsOrdered: Period[] = periodData.sort((a, b) => b.startYear - a.startYear);
 
-    if (gregorianYear < periodOrdered[periodOrdered.length - 1].startYear)
+    if (gregorianYear < periodsOrdered[periodsOrdered.length - 1].startYear)
       return null;
 
-    const exactPeriod = periodOrdered.find((period, i) => {
-      if (i === periodOrdered.length - 1) return true;
+    const exactPeriod: Period | undefined = periodsOrdered.find((period: Period, i) => {
+      if (i === periodsOrdered.length - 1) return true;
       if (gregorianYear > period.startYear) return true;
       if (
         gregorianYear === period.startYear &&
@@ -42,25 +41,29 @@ module.exports = {
       return false;
     });
 
-    const updatedPeriod = Object.assign(
-      { currentJapaneseYear: gregorianYear - exactPeriod.startYear + 1 },
-      exactPeriod
-    );
+    let updatedPeriod = null; 
+    
+    if (exactPeriod) {
+      updatedPeriod = {
+        currentJapaneseYear: gregorianYear - exactPeriod.startYear + 1,
+        ...exactPeriod
+      }
+    }
 
     return updatedPeriod;
-  },
+  }
 
   /**
    * Converts Japanese calendar year to Gregorian year range
    * @param {String} year
    * @return {object}
    */
-  gregorianYearRange: japanesePeriod => {
-    if (typeof japanesePeriod !== "string") {
-      throw new TypeError("Expected a String");
+  export const gregorianYearRange = (japanesePeriod: string): YearRange => {
+    if (typeof japanesePeriod !== 'string') {
+      throw new TypeError('Expected a String');
     }
 
-    let yearRange = null;
+    let yearRange: YearRange = null;
     const foundPeriod = periodData.find(
       period =>
         period.names.kanji === japanesePeriod ||
@@ -80,4 +83,3 @@ module.exports = {
 
     return yearRange;
   }
-};
