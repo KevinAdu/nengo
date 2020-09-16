@@ -7,7 +7,8 @@
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test.js",
     "lint": "./node_modules/.bin/eslint test.js index.js",
-    "prettier": "prettier --write test.js index.js"
+    "prettier": "prettier --write test.js index.js",
+    "build": "tsc"
   },
   "engines": {
     "node": ">=8.0.0"
