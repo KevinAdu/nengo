@@ -2,7 +2,8 @@
   "name": "nengo",
   "version": "2.1.0",
   "description": "An npm module to convert Gregorian calendar years into the Japanese Emperor format",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test.js",
