@@ -48,10 +48,6 @@ describe("#japaneseYear", () => {
     expect(meijiExactYear.names.english).to.include("Meiji");
     expect(meijiExactYear.currentJapaneseYear).to.equal(1);
   });
-
-  it("should throw a type error for a type it doesn't expect", () => {
-    expect(() => japaneseYear([])).to.throw(TypeError);
-  });
 });
 
 describe("#gregorianYearRange", () => {
@@ -76,9 +72,5 @@ describe("#gregorianYearRange", () => {
     expect(meijiPeriodRange.endYear).to.equal(1911);
     expect(genjiPeriodRange.endYear).to.equal(1864);
     expect(doesntExistPeriodRange).to.equal(null);
-  });
-
-  it("should throw a type error for a non string it doesn't expect", () => {
-    expect(() => gregorianYearRange(1229)).to.throw(TypeError);
   });
 });
