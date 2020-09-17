@@ -8,13 +8,9 @@ import periodData from './periods.json';
     let gregorianMonth: number;
     let gregorianDay: number;
 
-    if (gregorianDate instanceof Date) {
-      gregorianYear = gregorianDate.getFullYear();
-      gregorianMonth = gregorianDate.getMonth() + 1;
-      gregorianDay = gregorianDate.getDate();
-    } else {
-      throw new TypeError(`Expected a Date`);
-    }
+    gregorianYear = gregorianDate.getFullYear();
+    gregorianMonth = gregorianDate.getMonth() + 1;
+    gregorianDay = gregorianDate.getDate();
 
     const periodsOrdered: Period[] = periodData.sort((a, b) => b.startYear - a.startYear);
 
@@ -59,10 +55,6 @@ import periodData from './periods.json';
    * @return {object}
    */
   export const gregorianYearRange = (japanesePeriod: string): YearRange => {
-    if (typeof japanesePeriod !== 'string') {
-      throw new TypeError('Expected a String');
-    }
-
     let yearRange: YearRange = null;
     const foundPeriod = periodData.find(
       period =>

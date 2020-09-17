@@ -63,7 +63,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/KevinA
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using the following command:
 
 ```bash
-npm run-script lint
+npm run lint
 ```
 
 ## License
