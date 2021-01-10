@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { japaneseYear, gregorianYearRange } from './index';
+import { expect } from "chai";
+import { japaneseYear, gregorianYearRange } from "./index";
 
 describe("#japaneseYear", () => {
   it("should convert the Gregorian date to the appropriate Japanese calendar year", () => {
@@ -28,12 +28,12 @@ describe("#japaneseYear", () => {
     expect(tokyoOlympicYear.currentJapaneseYear).to.equal(2);
   });
 
-  it("should convert any date below the first recorded emperor calendar date to null", () => {
+  it("should convert any date below the first recorded emperor calendar date to undefined", () => {
     const gennaYear = japaneseYear(new Date(1615, 6, 1));
     const firstAdYear = japaneseYear(new Date(1600, 1, 1));
 
     expect(gennaYear.names.english).to.include("Genna");
-    expect(firstAdYear).to.equal(null);
+    expect(firstAdYear).to.equal(undefined);
   });
 
   it("should convert the Gregorian date in date format to the appropriate Japanese calendar year", () => {
@@ -66,11 +66,11 @@ describe("#gregorianYearRange", () => {
     expect(heiseiPeriodRange.startYear).to.equal(1989);
     expect(meijiPeriodRange.startYear).to.equal(1868);
     expect(genjiPeriodRange.startYear).to.equal(1864);
-    expect(reiwaPeriodRange.endYear).to.equal(null);
-    expect(reiwaPeriodRangeEnglish.endYear).to.equal(null);
+    expect(reiwaPeriodRange.endYear).to.equal(undefined);
+    expect(reiwaPeriodRangeEnglish.endYear).to.equal(undefined);
     expect(heiseiPeriodRange.endYear).to.equal(2018);
     expect(meijiPeriodRange.endYear).to.equal(1911);
     expect(genjiPeriodRange.endYear).to.equal(1864);
-    expect(doesntExistPeriodRange).to.equal(null);
+    expect(doesntExistPeriodRange).to.equal(undefined);
   });
 });

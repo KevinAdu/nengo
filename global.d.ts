@@ -3,20 +3,24 @@ type Period = {
   startMonth: number;
   startDay: number;
   names: {
-      kanji: string;
-      hiragana: string;
-      english: string;
+    kanji: string;
+    hiragana: string;
+    english: string;
   };
-}
+};
 
-type PeriodAndExactYear = Period & {
-  currentJapaneseYear: Number
-} | null;
+type PeriodAndExactYear =
+  | Period & {
+      currentJapaneseYear: number;
+    }
+  | undefined;
 
 type YearRange = {
-  startYear: number,
-  endYear: number | null
-} | null;
+  startYear: number;
+  endYear?: number;
+};
 
-type GregorianYearRangeFunction = (japanesePeriod: string) => YearRange;
 type JapaneseYearFunction = (gregorianDate: Date) => PeriodAndExactYear;
+type GregorianYearRangeFunction = (
+  japanesePeriod: string
+) => YearRange | undefined;
