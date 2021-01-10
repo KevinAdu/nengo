@@ -3,7 +3,7 @@ import periodData from './periods.json';
   /**
    * Converts Gregorian calendar year to Japanese calendar year
    */
-  export const japaneseYear = (gregorianDate: Date): PeriodAndExactYear => {
+  export const japaneseYear: JapaneseYearFunction = (gregorianDate) => {
     let gregorianYear: number;
     let gregorianMonth: number;
     let gregorianDay: number;
@@ -52,9 +52,9 @@ import periodData from './periods.json';
   /**
    * Converts Japanese calendar year to Gregorian year range
    * @param {String} year
-   * @return {object}
+   * @return {YearRange}
    */
-  export const gregorianYearRange = (japanesePeriod: string): YearRange => {
+  export const gregorianYearRange: GregorianYearRangeFunction = (japanesePeriod): YearRange => {
     let yearRange: YearRange = null;
     const foundPeriod = periodData.find(
       period =>

@@ -17,3 +17,6 @@ type YearRange = {
   startYear: number,
   endYear: number | null
 } | null;
+
+type GregorianYearRangeFunction = (japanesePeriod: string) => YearRange;
+type JapaneseYearFunction = (gregorianDate: Date) => PeriodAndExactYear;
